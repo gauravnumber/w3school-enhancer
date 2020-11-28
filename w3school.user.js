@@ -30,6 +30,4 @@ document.onkeyup = function(e) {
         let href = document.querySelector(".w3-right.w3-btn").getAttribute("href");
         window.location.assign(href)
     }
-
-
 }
