@@ -17,4 +17,19 @@ document.onkeyup = function(e) {
     if (e.altKey && e.which == 78) {
         submitTryit(1);
     }
+
+    // when left arrow then go to previous chapter
+    if (e.which == 37) {
+        let href = document.querySelector(".w3-left.w3-btn").getAttribute("href");
+        window.location.assign(href)
+    }
+
+    // when right arrow type then
+    // transfer into next chapter
+    if (e.which == 39) {
+        let href = document.querySelector(".w3-right.w3-btn").getAttribute("href");
+        window.location.assign(href)
+    }
+
+
 }
