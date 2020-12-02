@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        w3schools enhancer
 // @namespace   Violentmonkey Scripts
-// @match       https://www.w3schools.com/*/tryit.asp
+// @match       https://www.w3schools.com/*
 // @grant       none
 // @version     1.0
 // @author      -
@@ -9,9 +9,9 @@
 // ==/UserScript==
 
 document.onkeyup = function(e) {
-    let href = document.querySelector(".w3-left.w3-btn").getAttribute("href");
+    let href = window.location.href;
 
-    if (href.search(/https:\/\/www.w3schools.com*/)) {
+    if (/https:\/\/www\.w3schools\.com\/.*\/(?!tryit\.asp.*)/.test(href)) {
         // when left arrow then go to previous chapter
         if (e.which == 37) {
             let href = document.querySelector(".w3-left.w3-btn").getAttribute("href");
